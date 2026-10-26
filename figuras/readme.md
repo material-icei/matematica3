@@ -1,10 +1,14 @@
 Nivel 1: reconocer figuras (también giradas y de distintos colores), lados rectos o borde curvo, contar vértices, triángulos según sus ángulos y un memotest.
+
 Nivel 2: la guarda de Ramiro (qué figuras aparecen, cada cuántas se repite, marcar el patrón, encontrar su error), las secuencias de Pilar y una guarda propia.
+
 Nivel 3: las tarjetas de Pilar y Juani, Franco y Ramiro, y Lautaro, los “¿Quién soy?” con pistas que se van mostrando, los dos “Adiviná quién soy” y la actividad 8.
+
 Nivel 4: una mesa para mover, girar y voltear piezas sobre cuadrícula:
 las afirmaciones de Ramiro (dos triángulos forman un cuadrado; dos cuadrados forman un rectángulo);
 la cruz, la flecha y los dibujos de Renata y Federico;
 el cuadrado que Juani dice que queda adentro de su figura.
+
 Nivel 5: marcar vértices, lados y diagonales, el cuadro de la actividad 12 con medidas en cm, cuadriláteros y los triángulos numerados de la actividad 7.
 Las preguntas orales de la actividad 10 aparecen al final de cada nivel como “Para conversar con tus compañeros”.
 
