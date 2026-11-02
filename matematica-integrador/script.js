@@ -26,7 +26,7 @@
    (termina en /exec). Ver README.md, sección «Configurar Google Apps Script».
    ===================================================================== */
 const CONFIG = Object.assign({
-  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyI9clgqhrXJyPB21FXkfkG6hey9geuh4SkBSgikY25L57Q0MwvSWF-9u9FeNLCdb8cdg/exec',                 // ← pegar aquí la URL /exec del Apps Script
+  SCRIPT_URL: '',                 // ← pegar aquí la URL /exec del Apps Script
   GRADOS: ['3º'],
   DIVISIONES: ['A', 'B'],
   REINTENTOS: 3,                  // reintentos automáticos por envío
@@ -358,7 +358,7 @@ const MISIONES = [
         consigna: 'Leé cada pista y escribí con cifras el número secreto.', layout: 'col-3',
         items: [
           { tipo: 'blanks', titulo: 'Pista 1', lineas: [
-            { html: '<p class="texto-info">Tengo 4 cifras. Mis <b>unidades de mil</b> son 3, <b>no tengo centenas</b>, mis <b>decenas</b> son 5 y mis <b>unidades</b> son 8.</p>' },
+            { html: '<p class="texto-info">Tengo 4 cifras. Mis <b>miles</b> son 3, <b>no tengo cienes</b>, mis <b>dieces</b> son 5 y mis <b>unos</b> son 8.</p>' },
             { html: 'El número secreto es {n}', resp: [3058] }] },
           { tipo: 'blanks', titulo: 'Pista 2', lineas: [
             { html: '<p class="texto-info">Estoy justo después del <b>4.999</b>. Soy el primero de la familia del cinco mil.</p>' },
@@ -394,7 +394,7 @@ const MISIONES = [
         ]
       },
       {
-        id: 'M1A4', titulo: 'El valor de cada cifra', contenido: 'Valor de cada cifra según su posición (unidades, decenas, centenas y unidades de mil)',
+        id: 'M1A4', titulo: 'El valor de cada cifra', contenido: 'Valor de cada cifra según su posición (unos, dieces, cienes y miles)',
         consigna: 'Mirá la cifra roja de cada número. Escribí cuánto vale y llevá a cada casillero el lugar que ocupa.', layout: 'col-2',
         items: [
           { tipo: 'blanks', titulo: '¿Cuánto vale la cifra roja?', lineas: [
@@ -404,8 +404,8 @@ const MISIONES = [
             { html: '<span class="numero-grande">2.50<b class="dest">9</b></span> → vale {n}', resp: [9] }] },
           { tipo: 'casilleros', titulo: '¿En qué lugar está la cifra roja?',
             opciones: [
-              { id: 'um', html: 'unidades de mil', tipo: 'lugar' }, { id: 'c', html: 'centenas', tipo: 'lugar' },
-              { id: 'd', html: 'decenas', tipo: 'lugar' }, { id: 'u', html: 'unidades', tipo: 'lugar' }],
+              { id: 'um', html: 'miles', tipo: 'lugar' }, { id: 'c', html: 'cienes', tipo: 'lugar' },
+              { id: 'd', html: 'dieces', tipo: 'lugar' }, { id: 'u', html: 'unos', tipo: 'lugar' }],
             filas: [
               { html: '<span class="numero-grande"><b class="dest">4</b>.821</span> {lugar}', resp: ['um'] },
               { html: '<span class="numero-grande">8.1<b class="dest">4</b>2</span> {lugar}', resp: ['d'] },
@@ -726,7 +726,7 @@ const MISIONES = [
      vacio(item)              → respuesta inicial
      render(nodo, item, v, cb)→ dibuja y llama cb(nuevoValor) al cambiar
      completo(item, v)        → true si no quedan partes sin responder
-     corregir(item, v)        → { ok, total } (unidades correctas / totales)
+     corregir(item, v)        → { ok, total } (partes correctas / totales)
      describir(item, v)       → texto de la respuesta del alumno
      solucion(item)           → texto de la respuesta correcta
      resolver(item)           → respuesta correcta (para pruebas y banco)
