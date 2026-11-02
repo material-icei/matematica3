@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" role="img" aria-label="Lupe, la exploradora">
+  <!-- Lupe, la exploradora guía de La Gran Aventura Matemática -->
+  <defs>
+    <linearGradient id="lente" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8FBFF"/>
+      <stop offset="1" stop-color="#9FE3F5"/>
+    </linearGradient>
+  </defs>
+  <!-- sombra -->
+  <ellipse cx="100" cy="250" rx="58" ry="8" fill="#23264A" opacity=".12"/>
+  <!-- mochila -->
+  <rect x="48" y="128" width="30" height="58" rx="10" fill="#E0664A"/>
+  <rect x="52" y="146" width="22" height="14" rx="4" fill="#C9513A"/>
+  <!-- piernas -->
+  <rect x="78" y="196" width="16" height="44" rx="7" fill="#3A3F7A"/>
+  <rect x="104" y="196" width="16" height="44" rx="7" fill="#3A3F7A"/>
+  <path d="M72 238h26a6 6 0 0 1 0 12H72a6 6 0 0 1 0-12z" fill="#6B3E26"/>
+  <path d="M102 238h26a6 6 0 0 1 0 12h-26a6 6 0 0 1 0-12z" fill="#6B3E26"/>
+  <!-- short -->
+  <path d="M72 180h56l4 30H106l-7-14-7 14H68z" fill="#4A5096"/>
+  <!-- cuerpo / camisa -->
+  <path d="M70 124c0-10 8-16 30-16s30 6 30 16l2 60H68z" fill="#E9C46A"/>
+  <path d="M100 110l-10 14 10 8 10-8z" fill="#F4E3B1"/>
+  <rect x="96" y="132" width="8" height="48" fill="#D9AF4E" opacity=".6"/>
+  <rect x="78" y="140" width="14" height="12" rx="3" fill="#D9AF4E"/>
+  <rect x="108" y="140" width="14" height="12" rx="3" fill="#D9AF4E"/>
+  <!-- brazo izquierdo (saludando) -->
+  <path d="M72 128c-14 4-22 -6-26-22" stroke="#E9C46A" stroke-width="15" stroke-linecap="round" fill="none"/>
+  <circle cx="45" cy="100" r="9" fill="#C68B5E"/>
+  <!-- brazo derecho con lupa -->
+  <path d="M128 130c12 6 18 14 22 24" stroke="#E9C46A" stroke-width="15" stroke-linecap="round" fill="none"/>
+  <rect x="146" y="150" width="9" height="34" rx="4" transform="rotate(-35 150 167)" fill="#7A4A2A"/>
+  <circle cx="153" cy="156" r="8" fill="#C68B5E"/>
+  <circle cx="168" cy="132" r="22" fill="url(#lente)" stroke="#3A3F7A" stroke-width="6"/>
+  <path d="M156 124a14 14 0 0 1 12-8" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- cuello y cabeza -->
+  <rect x="92" y="98" width="16" height="14" rx="5" fill="#B87C52"/>
+  <circle cx="100" cy="74" r="32" fill="#C68B5E"/>
+  <!-- pelo -->
+  <path d="M68 74c0-26 16-38 34-38s32 12 32 36c-6-10-16-16-30-16-14 0-26 6-36 18z" fill="#3B2216"/>
+  <path d="M130 70c8 10 10 30 2 46-4-8-6-16-6-26z" fill="#3B2216"/>
+  <circle cx="134" cy="118" r="6" fill="#E0664A"/>
+  <path d="M132 120c2 10 0 18-4 24 8-2 12-10 10-22z" fill="#3B2216"/>
+  <!-- sombrero explorador -->
+  <ellipse cx="100" cy="48" rx="50" ry="10" fill="#B5894A"/>
+  <path d="M70 48c0-22 12-32 30-32s30 10 30 32z" fill="#D4A65E"/>
+  <rect x="70" y="38" width="60" height="9" fill="#7A4A2A"/>
+  <!-- cara -->
+  <ellipse cx="88" cy="78" rx="4.5" ry="5.5" fill="#23264A"/>
+  <ellipse cx="112" cy="78" rx="4.5" ry="5.5" fill="#23264A"/>
+  <circle cx="89.5" cy="76" r="1.6" fill="#fff"/>
+  <circle cx="113.5" cy="76" r="1.6" fill="#fff"/>
+  <path d="M82 68q6-4 12 0M106 68q6-4 12 0" stroke="#3B2216" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <circle cx="80" cy="90" r="5" fill="#E58C7A" opacity=".55"/>
+  <circle cx="120" cy="90" r="5" fill="#E58C7A" opacity=".55"/>
+  <path d="M90 92q10 9 20 0" stroke="#23264A" stroke-width="3" stroke-linecap="round" fill="#fff"/>
+</svg>

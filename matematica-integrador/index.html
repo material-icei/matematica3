@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>La Gran Aventura Matemática · Integrador 3º grado</title>
+  <meta name="description" content="Integrador de Matemática para 3º grado: El desafío de los cuatro reinos.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!--
+    LA GRAN AVENTURA MATEMÁTICA – El desafío de los cuatro reinos
+    Integrador de Matemática · 3º grado
+    Toda la aplicación vive dentro de #stage, un escenario 16:9 que se escala
+    para entrar completo en la pantalla (sin scroll vertical en Chromebooks).
+  -->
+  <div id="app">
+    <main id="stage" aria-live="polite">
+
+      <!-- ===================== PANTALLA 1: INICIO ===================== -->
+      <section id="s-inicio" class="screen" aria-labelledby="titulo-app">
+        <div class="deco deco-1"></div><div class="deco deco-2"></div><div class="deco deco-3"></div>
+        <div class="inicio-hero">
+          <div class="hero-cristales" id="hero-cristales"></div>
+          <img class="hero-guia" src="assets/images/exploradora.svg" alt="Lupe, la exploradora, saluda con su lupa">
+          <div class="burbuja burbuja-hero">¡Hola! Soy <b>Lupe</b>. ¿Me ayudás a recuperar los cuatro cristales matemáticos?</div>
+        </div>
+        <div class="inicio-panel card">
+          <p class="kicker">Integrador de Matemática – 3º grado</p>
+          <h1 id="titulo-app">LA GRAN AVENTURA<br><span>MATEMÁTICA</span></h1>
+          <p class="sub">El desafío de los cuatro reinos</p>
+
+          <!-- Aventura guardada en esta computadora (se completa desde script.js) -->
+          <div id="reanudar" class="aviso aviso-info" hidden></div>
+
+          <form id="form-inicio" novalidate autocomplete="off">
+            <label class="campo">
+              <span>Nombre y apellido</span>
+              <input id="in-nombre" type="text" maxlength="60" placeholder="Ej.: Sofía Gómez" required>
+            </label>
+            <div class="campo-fila">
+              <label class="campo">
+                <span>Grado</span>
+                <select id="in-grado" required></select>
+              </label>
+              <label class="campo">
+                <span>División</span>
+                <select id="in-division" required></select>
+              </label>
+            </div>
+            <p id="error-inicio" class="error-form" role="alert"></p>
+            <button type="submit" class="btn btn-grande btn-primario" id="btn-comenzar">¡COMENZAR LA AVENTURA!</button>
+          </form>
+          <p id="pendientes-inicio" class="nota-pendientes" hidden></p>
+        </div>
+        <button type="button" class="btn-docente" id="btn-docente" title="Panel para la docente">Docente</button>
+      </section>
+
+      <!-- ===================== PANTALLA 2: MAPA DE LOS REINOS ===================== -->
+      <section id="s-mapa" class="screen" aria-label="Mapa de los cuatro reinos">
+        <header class="barra-superior">
+          <div class="alumno-chip" id="mapa-alumno"></div>
+          <div class="progreso-general">
+            <span>Avance de la aventura</span>
+            <div class="barra"><div class="barra-relleno" id="mapa-progreso"></div></div>
+            <b id="mapa-progreso-txt"></b>
+          </div>
+          <div class="cristales-mini" id="mapa-cristales"></div>
+        </header>
+        <div class="mapa" id="mapa"></div>
+        <div class="guia-esquina">
+          <img src="assets/images/exploradora.svg" alt="">
+          <div class="burbuja" id="mapa-burbuja"></div>
+        </div>
+      </section>
+
+      <!-- ===================== PANTALLA 3: PRESENTACIÓN DE MISIÓN ===================== -->
+      <section id="s-mision" class="screen" aria-label="Presentación de la misión">
+        <div class="mision-intro card" id="mision-intro"></div>
+      </section>
+
+      <!-- ===================== PANTALLA 4: DESAFÍO ===================== -->
+      <section id="s-actividad" class="screen" aria-label="Desafío">
+        <header class="barra-superior barra-actividad">
+          <div class="mision-chip" id="act-mision"></div>
+          <div class="progreso-general">
+            <span id="act-numero"></span>
+            <div class="barra"><div class="barra-relleno" id="act-progreso"></div></div>
+          </div>
+          <div class="cristales-mini" id="act-cristales"></div>
+        </header>
+        <div class="consigna">
+          <img src="assets/images/exploradora.svg" alt="" class="consigna-guia">
+          <div>
+            <h2 id="act-titulo"></h2>
+            <p id="act-consigna"></p>
+          </div>
+        </div>
+        <div class="act-area" id="act-area"></div>
+        <footer class="act-pie">
+          <p class="act-aviso" id="act-aviso" role="status"></p>
+          <div class="act-botones">
+            <button type="button" class="btn btn-secundario" id="btn-anterior">◀ Anterior</button>
+            <button type="button" class="btn btn-primario btn-grande" id="btn-siguiente">Siguiente ▶</button>
+          </div>
+        </footer>
+      </section>
+
+      <!-- ===================== PANTALLA 5: FIN DE MISIÓN ===================== -->
+      <section id="s-fin" class="screen" aria-label="Misión completada">
+        <div class="confeti" id="confeti"></div>
+        <div class="fin-card card" id="fin-card"></div>
+      </section>
+
+      <!-- ===================== PANTALLA 6: REVISIÓN ANTES DE ENVIAR ===================== -->
+      <section id="s-revision" class="screen" aria-label="Revisión de respuestas">
+        <header class="barra-superior">
+          <div class="alumno-chip" id="rev-alumno"></div>
+          <h2 class="rev-titulo">Revisá tus respuestas antes de enviarlas</h2>
+          <div class="cristales-mini" id="rev-cristales"></div>
+        </header>
+        <p class="rev-ayuda">Tocá un desafío para volver a mirarlo y cambiar lo que quieras. Cuando estés conforme, tocá <b>«Enviar a la docente»</b>.</p>
+        <div class="rev-grilla" id="rev-grilla"></div>
+        <footer class="act-pie">
+          <p class="act-aviso" id="rev-aviso" role="status"></p>
+          <div class="act-botones">
+            <button type="button" class="btn btn-primario btn-grande" id="btn-enviar">Enviar a la docente ✉</button>
+          </div>
+        </footer>
+      </section>
+
+      <!-- ===================== PANTALLA 7: INFORME FINAL ===================== -->
+      <section id="s-informe" class="screen" aria-label="Informe final">
+        <div class="informe" id="informe"></div>
+      </section>
+
+      <!-- ===================== PANEL DOCENTE (solo se abre desde el botón «Docente») ===================== -->
+      <div class="panel-docente" id="panel-docente" hidden>
+        <div class="card panel-docente-card" role="region" aria-label="Panel docente">
+          <h2>Panel docente</h2>
+          <ul class="panel-lista" id="panel-estado"></ul>
+          <div class="panel-botones">
+            <button type="button" class="btn btn-secundario" id="btn-probar">Probar conexión</button>
+            <button type="button" class="btn btn-secundario" id="btn-reenviar">Enviar pendientes</button>
+            <button type="button" class="btn btn-secundario" id="btn-descargar">Descargar copia (JSON)</button>
+            <button type="button" class="btn btn-primario" id="btn-cerrar-panel">Cerrar</button>
+          </div>
+          <p class="panel-msg" id="panel-msg" role="status"></p>
+        </div>
+      </div>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </main>
+  </div>
+
+  <!-- Aviso para pantallas en vertical -->
+  <div id="girar" aria-hidden="true">
+    <div>↻</div>
+    <p>Girá la pantalla para jugar en horizontal.</p>
+  </div>
+
+  <noscript><p style="padding:2rem;font-family:sans-serif">Esta aplicación necesita JavaScript activado.</p></noscript>
+  <script src="script.js"></script>
+</body>
+</html>

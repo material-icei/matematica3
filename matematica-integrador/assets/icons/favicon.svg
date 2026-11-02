@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Cristal matemático: ícono de la aplicación -->
+  <polygon points="32,4 56,22 46,58 18,58 8,22" fill="#6C5CE7"/>
+  <polygon points="32,4 44,22 32,58 20,22" fill="#8F82F2"/>
+  <polygon points="8,22 56,22 32,4" fill="#B3A9FF"/>
+  <text x="32" y="44" font-family="Arial, sans-serif" font-weight="bold" font-size="20" text-anchor="middle" fill="#fff">+</text>
+</svg>
