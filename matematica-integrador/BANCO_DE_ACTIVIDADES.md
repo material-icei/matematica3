@@ -15,7 +15,7 @@ Cada desafío vale **10 puntos** (total 240). Si tiene varias partes, el puntaje
 
 | Parte | Formato | Enunciado | Respuesta correcta |
 |---|---|---|---|
-| a | Completar espacios | Pista 1: Tengo 4 cifras. Mis unidades de mil son 3, no tengo centenas, mis decenas son 5 y mis unidades son 8. | El número secreto es 3.058 |
+| a | Completar espacios | Pista 1: Tengo 4 cifras. Mis miles son 3, no tengo cienes, mis dieces son 5 y mis unos son 8. | El número secreto es 3.058 |
 | b | Completar espacios | Pista 2: Estoy justo después del 4.999. Soy el primero de la familia del cinco mil. | El número secreto es 5.000 |
 | c | Completar espacios | Pista 3: Si junto 10 billetes de $100, formo este número. | El número secreto es 1.000 |
 
@@ -43,13 +43,13 @@ Cada desafío vale **10 puntos** (total 240). Si tiene varias partes, el puntaje
 
 ### 1.4 El valor de cada cifra
 
-- **Contenido evaluado:** Valor de cada cifra según su posición (unidades, decenas, centenas y unidades de mil)
+- **Contenido evaluado:** Valor de cada cifra según su posición (unos, dieces, cienes y miles)
 - **Consigna:** Mirá la cifra roja de cada número. Escribí cuánto vale y llevá a cada casillero el lugar que ocupa.
 
 | Parte | Formato | Enunciado | Respuesta correcta |
 |---|---|---|---|
 | a | Completar espacios | ¿Cuánto vale la cifra roja? | 4.821 → vale 4.000 / 8.142 → vale 40 / 6.375 → vale 300 / 2.509 → vale 9 |
-| b | Llevar fichas a casilleros | ¿En qué lugar está la cifra roja? | unidades de mil / decenas / centenas / unidades |
+| b | Llevar fichas a casilleros | ¿En qué lugar está la cifra roja? | miles / dieces / cienes / unos |
 
 ### 1.5 Ordenar números
 
@@ -273,4 +273,6 @@ Cada desafío vale **10 puntos** (total 240). Si tiene varias partes, el puntaje
 | — | Texto del problema | Mamá fue al supermercado con $5.000. Compró 3 paquetes de fideos que cuestan $850 cada uno.¿Cuánto dinero le quedó? | — |
 | a | Llevar fichas a casilleros | Paso 1: armá el cálculo para saber cuánto gastó | 3 × 850 o 850 × 3 |
 | b | Completar espacios | Paso 2: respondé | Gastó $ 2.550 / Le quedaron $ 2.450 |
+
+
 
