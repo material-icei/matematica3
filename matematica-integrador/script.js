@@ -26,7 +26,7 @@
    (termina en /exec). Ver README.md, sección «Configurar Google Apps Script».
    ===================================================================== */
 const CONFIG = Object.assign({
-  SCRIPT_URL: '',                 // ← pegar aquí la URL /exec del Apps Script
+  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyI9clgqhrXJyPB21FXkfkG6hey9geuh4SkBSgikY25L57Q0MwvSWF-9u9FeNLCdb8cdg/exec',                 // ← pegar aquí la URL /exec del Apps Script
   GRADOS: ['3º'],
   DIVISIONES: ['A', 'B'],
   REINTENTOS: 3,                  // reintentos automáticos por envío
